@@ -199,51 +199,126 @@
       </div>
 
       <!-- Income Breakdown -->
-      <div class="section">
-        <h2 class="section-title">Income Composition H1 FY25</h2>
-        <div class="card">
-          <div class="metric">
-            <div class="metric-title">Interest Income from Treasury</div>
-            <div class="metric-value">₹352.43 Cr (31.7%)</div>
-            <div class="progress-bar">
-              <div class="progress-fill bg-blue" style="width: 31.7%"></div>
-            </div>
-            <div class="metric-subtitle">
-              Fixed Deposits & Investment Securities
-            </div>
-          </div>
-          <div class="metric">
-            <div class="metric-title">Net Fair Value Changes</div>
-            <div class="metric-value">₹424.84 Cr (38.2%)</div>
-            <div class="progress-bar">
-              <div class="progress-fill bg-yellow" style="width: 38.2%"></div>
-            </div>
-            <div class="metric-subtitle">Mark-to-Market Gains</div>
-          </div>
-          <div class="metric">
-            <div class="metric-title">Dividend Income</div>
-            <div class="metric-value">₹240.94 Cr (21.7%)</div>
-            <div class="progress-bar">
-              <div class="progress-fill bg-purple" style="width: 21.7%"></div>
-            </div>
-          </div>
-          <div class="metric">
-            <div class="metric-title">Interest from Lending</div>
-            <div class="metric-value">₹14.29 Cr (1.3%)</div>
-            <div class="progress-bar">
-              <div class="progress-fill bg-green" style="width: 1.3%"></div>
-            </div>
-            <div class="metric-subtitle">Core Lending Operations</div>
-          </div>
-          <div class="metric">
-            <div class="metric-title">Fees & Commission</div>
-            <div class="metric-value">₹78.82 Cr (7.1%)</div>
-            <div class="progress-bar">
-              <div class="progress-fill bg-indigo" style="width: 7.1%"></div>
-            </div>
-          </div>
-        </div>
+      <style>
+.income-breakdown-bar {
+  font-family: inherit;
+}
+.income-breakdown-bar text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+.metric-heading {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+.metric-subtext {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+</style>
+
+<div class="section">
+  <h2 class="section-title">Income Composition H1 FY25</h2>
+  <div class="card">
+    <svg class="income-breakdown-bar" viewBox="0 0 800 400" style="width: 100%; height: auto; margin: 20px 0;">
+      <!-- Grid lines -->
+      <g stroke="#E5E7EB" stroke-width="1">
+        <line x1="100" y1="50" x2="700" y2="50" />
+        <line x1="100" y1="100" x2="700" y2="100" />
+        <line x1="100" y1="150" x2="700" y2="150" />
+        <line x1="100" y1="200" x2="700" y2="200" />
+        <line x1="100" y1="250" x2="700" y2="250" />
+        <line x1="100" y1="300" x2="700" y2="300" />
+      </g>
+
+      <!-- Y-axis labels -->
+      <g fill="#666666" font-size="12" text-anchor="end">
+        <text x="90" y="55">50%</text>
+        <text x="90" y="105">40%</text>
+        <text x="90" y="155">30%</text>
+        <text x="90" y="205">20%</text>
+        <text x="90" y="255">10%</text>
+        <text x="90" y="305">0%</text>
+      </g>
+
+      <!-- Bars -->
+      <g>
+        <!-- Fair Value Changes -->
+        <rect x="140" y="160" width="80" height="140" fill="#EC4A4A" />
+        <text x="180" y="320" text-anchor="middle" fill="#666666" font-size="12" font-weight="600">Fair Value</text>
+        <text x="180" y="340" text-anchor="middle" fill="#666666" font-size="12" font-weight="600">Changes</text>
+        <text x="180" y="150" text-anchor="middle" fill="#1a1a1a" font-size="14" font-weight="400">38.2%</text>
+
+        <!-- Interest Income -->
+        <rect x="260" y="175" width="80" height="125" fill="#C188FF" />
+        <text x="300" y="320" text-anchor="middle" fill="#666666" font-size="12" font-weight="600">Interest</text>
+        <text x="300" y="340" text-anchor="middle" fill="#666666" font-size="12" font-weight="600">Income</text>
+        <text x="300" y="165" text-anchor="middle" fill="#1a1a1a" font-size="14" font-weight="400">31.7%</text>
+
+        <!-- Dividend Income -->
+        <rect x="380" y="210" width="80" height="90" fill="#F96512" />
+        <text x="420" y="320" text-anchor="middle" fill="#666666" font-size="12" font-weight="600">Dividend</text>
+        <text x="420" y="340" text-anchor="middle" fill="#666666" font-size="12" font-weight="600">Income</text>
+        <text x="420" y="200" text-anchor="middle" fill="#1a1a1a" font-size="14" font-weight="400">21.7%</text>
+
+        <!-- Fees & Commission -->
+        <rect x="500" y="270" width="80" height="30" fill="#49D9B6" />
+        <text x="540" y="320" text-anchor="middle" fill="#666666" font-size="12" font-weight="600">Fees &</text>
+        <text x="540" y="340" text-anchor="middle" fill="#666666" font-size="12" font-weight="600">Commission</text>
+        <text x="540" y="260" text-anchor="middle" fill="#1a1a1a" font-size="14" font-weight="400">7.1%</text>
+
+        <!-- Interest from Lending -->
+        <rect x="620" y="295" width="80" height="5" fill="#23460D" />
+        <text x="660" y="320" text-anchor="middle" fill="#666666" font-size="12" font-weight="600">Interest from</text>
+        <text x="660" y="340" text-anchor="middle" fill="#666666" font-size="12" font-weight="600">Lending</text>
+        <text x="660" y="285" text-anchor="middle" fill="#1a1a1a" font-size="14" font-weight="400">1.3%</text>
+      </g>
+
+      <!-- Y-axis line -->
+      <line x1="100" y1="50" x2="100" y2="300" stroke="#E5E7EB" stroke-width="1"/>
+    </svg>
+
+    <!-- Value details in grid -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+      <div class="metric">
+        <div class="metric-heading">Fair Value Changes</div>
+        <div class="metric-value">₹424.84 Cr</div>
+        <div class="metric-subtext">38.2% of Total Income</div>
       </div>
+      <div class="metric">
+        <div class="metric-heading">Interest Income</div>
+        <div class="metric-value">₹352.43 Cr</div>
+        <div class="metric-subtext">31.7% of Total Income</div>
+      </div>
+      <div class="metric">
+        <div class="metric-heading">Dividend Income</div>
+        <div class="metric-value">₹240.94 Cr</div>
+        <div class="metric-subtext">21.7% of Total Income</div>
+      </div>
+      <div class="metric">
+        <div class="metric-heading">Fees & Commission</div>
+        <div class="metric-value">₹78.82 Cr</div>
+        <div class="metric-subtext">7.1% of Total Income</div>
+      </div>
+      <div class="metric">
+        <div class="metric-heading">Interest from Lending</div>
+        <div class="metric-value">₹14.29 Cr</div>
+        <div class="metric-subtext">1.3% of Total Income</div>
+      </div>
+    </div>
+  </div>
+</div>
 
       <!-- Asset Allocation -->
       <div class="section">
